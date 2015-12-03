@@ -1,0 +1,13 @@
+<div>
+    <div id="page-selection"></div>
+    <script language="javascript">
+        $('#page-selection').bootpag({
+            total: <%- total %>,
+            maxVisible : <%- maxVisible %>,
+            page : <%- page %>,
+            leaps : true
+        }).on("page", function(event, num){
+            location.href = "<%- route %>" + num + "/";
+        });
+    </script>
+</div>

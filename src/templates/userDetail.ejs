@@ -1,0 +1,130 @@
+<body>
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-4">
+                <h2>(單一)會員基本資料</h2>
+            </div>
+        </div>
+        <table class="table table-striped table-hover">
+            <thead>
+                <th>帳號</th>
+                <th>密碼</th>
+                <th>連結賬戶</th>
+                <th>註冊日期</th>
+                <th>語系</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <%= user.account %>
+                    </td>
+                    <td>
+                        <%= user.pwd %>
+                    </td>
+                    <td>
+                        <%= user.pwd %>
+                    </td>
+                    <td>
+                        <%= format(user.created_time) %>
+                    </td>
+                    <td>
+                        <%= language.lang[user.lang] %>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="row">
+            <div class="col-lg-4">
+                <h3>換機紀錄</h3>
+            </div>
+        </div>
+        <table class="table table-striped table-hover">
+            <thead>
+                <th>#</th>
+                <th>狀態</th>
+                <th>裝置ID</th>
+                <th>平台</th>
+                <th>機種</th>
+                <th>登錄時間</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        1
+                    </td>
+                    <td>
+                        Active Pad
+                    </td>
+                    <td>
+                        <%= user.dev.dev_id %>
+                    </td>
+                    <td>
+                        <%= language.os[user.dev.os] %>
+                    </td>
+                    <td>
+                        <%= user.dev.mobile_type %>
+                    </td>
+                    <td>
+                        <%= format(user.dev.login) %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        2
+                    </td>
+                    <td>
+                        Last Pad
+                    </td>
+                    <td>
+                        <%= user.dev.old_dev_id %>
+                    </td>
+                    <td>
+                        <%= language.os[user.old_dev.os] %>
+                    </td>
+                    <td>
+                        <%= user.old_dev.mobile_type %>
+                    </td>
+                    <td>
+                        <%= format(user.old_dev.login) %>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="row">
+            <div class="col-lg-4">
+                <h3>持有卡包</h3>
+            </div>
+        </div>
+        <table class="table table-striped table-hover">
+            <thead>
+                <th>#</th>
+                <th>產品編號</th>
+                <th>產品名稱</th>
+                <th>啟動碼</th>
+                <th>啟用日期</th>
+                <th>作廢否</th>
+            </thead>
+            <tbody>
+                <% user.prods.forEach(function(prod, index){ %>
+                <tr>
+                    <td>
+                        <%= index + 1 %>
+                    </td>
+                    <td>
+                        <%= prod.code %>
+                    </td>
+                    <td>
+                        <%= prod.name %>
+                    </td>
+                    <td>
+                        <%= prod.start_code %>
+                    </td>
+                    <td>
+                        <%= format(prod.deal_time) %>
+                    </td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</body>

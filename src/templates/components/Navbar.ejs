@@ -1,0 +1,132 @@
+<nav
+    role="navigation"
+    class="navbar navbar-default">
+
+    <div class="navbar-header">
+                <button
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="navbar-collapse"
+                    class="navbar-toggle">
+
+                    <span class="sr-only">
+                        Toggle navigation
+                    </span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a
+                    href="#"
+                    onClick={false}
+                    class="navbar-brand">
+                    PadKaKa的管理後台
+                </a>
+            </div>
+            <ul
+                class="nav navbar-top-links navbar-right">
+
+                <li class="dropdown">
+                    <a
+                        data-toggle="dropdown"
+                        href=""
+                        class="dropdown-toggle">
+
+                        <i class="fa fa-user">Admin</i>
+                        <b class="caret"></b>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#settingpage">
+                                <i class="fa fa-fw fa-gear"></i>
+                                settings
+                            </a>
+                        </li>
+
+                        <li class="divider"></li>
+
+                        <li>
+                            <a
+                                href="/padkaka/admin/logout/"
+                                className="fa fa-fw fa-power-off">
+                                登出
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse in" aria-expanded="true">
+                    <ul
+                        id="side-menu"
+                        class="nav in">
+
+                        <li>
+                            <a
+                                href="/padkaka/admin/show/news/1/"
+                                className="fa fa-fw">
+                                <span>最新消息</span>
+                            </a>
+
+                        </li>
+
+                        <li>
+                           <a
+                                href="/padkaka/admin/show/notification/1/"
+                                className="fa fa-fw">
+                                <span>推播消息</span>
+                            </a>
+
+                        </li>
+
+                        <li>
+                           <a
+                                href="/padkaka/admin/show/users/1/"
+                                className="fa fa-fw">
+                                <span>會員管理</span>
+                            </a>
+
+                        </li>
+
+                        <li>
+                           <a
+                                href="/padkaka/admin/show/prods/1/"
+                                className="fa fa-fw">
+                                <span>產品管理</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="/padkaka/admin/show/start_codes/1/"
+                                className="fa fa-fw">
+                                <span>啟動碼管理</span>
+                            </a>
+
+                        </li>
+
+                        <li>
+                           <a
+                                href="/padkaka/admin/show/medias/1/"
+                                className="fa fa-fw">
+                                <span>教學影片</span>
+                            </a>
+
+                        </li>
+
+                        <li>
+                           <a
+                                href="/padkaka/admin/logout"
+                                className="fa fa-fw">
+                                <span>登出</span>
+                            </a>
+
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>

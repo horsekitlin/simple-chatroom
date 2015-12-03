@@ -1,0 +1,39 @@
+<body>
+    <div class="container">
+        <form class="form-signin" id="form" method="POST" action=".">
+            <h2 class="form-signin-heading">Please sign in</h2>
+            <div class="form-group">
+
+                <label for="inputEmail" class="sr-only">Account</label>
+                <input type="text" id="account" name="account" class="form-control" placeholder="Account" required="" autofocus="">
+
+            </div>
+            <div class="form-group">
+
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" id="pwd" name="pwd" class="form-control" placeholder="Password" required="">
+
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        </form>
+    </div>
+</body>
+
+<script>
+    $('#form').submit(function(ev) {
+        ev.preventDefault(); // to stop the form from submitting
+        MakeProgressRequest(this, (resp) => {
+
+            if(resp.status === 200){
+
+                window.location.href = "/padkaka/admin/show/news/1/";
+
+
+            }else{
+
+                alert(resp.message);
+
+            }
+        });
+    });
+</script>
